@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Starship</title>
+<style>
+/* Hidden line for separating boxes */
+h2.hidden {visibility:hidden;font-size:50px}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Starship</title>
+<style>
+/* Hidden line for separating boxes */
+h2.hidden {visibility:hidden;font-size:50px}
+
+
+/* Links */
+a:link {color:#00FFFF;}      /* 未访问链接*/
+a:visited {color:#00FFFF;}  /* 已访问链接 */
+a:hover {color:#800000;}  /* 鼠标移动到链接上 */
+a:active {color:#800000;}  /* 鼠标点击时 */
+a{text-decoration:none}
+
+
+/* Three parts */
+#header{height:700px; display: block;  background:url(http://wx2.sinaimg.cn/large/0062QsxNgy1g5byigumgyj31hc0jgjtp.jpg)  no-repeat top center fixed; position: relative; text-align: center}
+.header_bg{display: block;width:1000px;margin:0px auto 0;padding-top:100px;padding-bottom:0px}
+.header_bg h1 {text-align: center;font-size:75px;line-height:50px;color: #FFFF99;}
+.header_bg h2 {text-align: center;font-size:30px;color: #FFFF99;}
+.header_bg h3 {text-align: center;font-size:25px;color: #fff;}
+.header_bg h3 strong {text-align: center;font-size:30px;color: #FFF;}
+.header_bg p{text-align: center;font-size:20px;color:#fff;}
+
+
+#footer {background-color: #f1f1f1;padding: 10px; text-align: center;
+}
+
+
+body{background:url(http://wx1.sinaimg.cn/large/0062QsxNgy1g5d70s39wij30s50gbae0.jpg)}
+
+/* Boxes and Button */
+.input_container{margin: auto; background-color:#fffacd; opacity:0.9; width: 600px; height:100%; border: 0px; padding: 25px; font-size:25px; text-align:center; box-shadow: 10px 10px 5px #888888; border-radius:25px;}
+
+.wide_boxes6:hover {margin: auto; background-color:#F0F0F0; border: 1px solid black; opacity:1; width: 430px; font-size:30px; text-align:center; border-radius:10px;}
+.wide_boxes6 {margin: auto; background-color:#F0F0F0; border: 1px solid black; opacity:0.7; width: 430px; font-size:30px; text-align:center; border-radius:10px;}
+
+.wide_boxes_output:hover {margin: auto; background-color:#fffacd; opacity:1; width: 600px; border: 0px; padding: 25px; font-size:25px; text-align:center; box-shadow: 10px 10px 5px #888888; border-radius:25px;}
+.wide_boxes_output {margin: auto; background-color:#fffacd; opacity:0.7; width: 600px; border: 0px; padding: 25px; font-size:25px; text-align:center; box-shadow: 10px 10px 5px #888888; border-radius:25px;}
+
+.select_button {background-color: #FFFFF0; border: none; color: black; padding: 10px 15px; text-align: center; text-decoration: none; display: inline-block; font-size: 10px; margin: 4px 2px; cursor: pointer}
+.submit_button {margin:auto;background-color: #FFFFF0; color: black; padding: 10px 15px; text-align: center; font-size: 15px; margin: 4px 2px;height:40px; width:80px;cursor: pointer;position:relative;left:-160px}
+.submit_button:hover {margin:auto;background-color: #FFCC99; color: black; padding: 10px 15px; text-align: center; font-size: 15px; margin: 4px 2px;height:40px; width:80px;cursor: pointer;position:relative;left:-160px}
+
+.output_container {margin: 0 auto; width: 1300px; height: 450px; border: 0px; text-align: center;}
+
+.output_divbox1:hover {box-sizing: border-box; width: 25%; padding:0px; margin:10px; height: 400px; background:#fffacd; display: inline-block; font-size:30px; box-shadow: 10px 10px 5px #888888; border-radius:25px; opacity:1; color:black;}
+.output_divbox1 {box-sizing: border-box; width: 25%; padding:0px; margin:10px; height: 400px; background:#fffacd; display: inline-block; font-size:30px; box-shadow: 10px 10px 5px #888888; border-radius:25px; opacity:0.7; color:black;}
+
+.output_divbox2:hover {box-sizing: border-box; width: 25%; padding:0px; margin:10px; height: 400px; background:#fffacd; display: inline-block; font-size:30px; box-shadow: 10px 10px 5px #888888; border-radius:25px; opacity:1; color:black;}
+.output_divbox2 {box-sizing: border-box; width: 25%; padding:0px; margin:10px; height: 400px; background:#fffacd; display: inline-block; font-size:30px; box-shadow: 10px 10px 5px #888888; border-radius:25px; opacity:0.7; color:black;}
+
+.output_divbox3:hover {box-sizing: border-box; width: 25%; padding:0px; margin:10px; height: 400px; background:#fffacd; display: inline-block; font-size:30px; box-shadow: 10px 10px 5px #888888; border-radius:25px; opacity:1; color:black;}
+.output_divbox3 {box-sizing: border-box; width: 25%; padding:0px; margin:10px; height: 400px; background:#fffacd; display: inline-block; font-size:30px; box-shadow: 10px 10px 5px #888888; border-radius:25px; opacity:0.7; color:black;}
+
+.hidden_div{position:absolute;top:1650px;left:680px;display:none;height:100px;width:100px;}
+
+tr{height:60px;}
+tr:hover,tr.hilite {background-color:#FFCC99;color:black;}
+table,th,td{width:100%;border:0px;}
+
+</style>
+
+<script type="text/javascript">
+    var rows = document.getElementsByTagName('tr');
+        for(var i=0 ;i<rows.length; i++)
+        {
+            rows[i].onmouseover = function(){
+                this.className += 'hilite';
+            }
+            rows[i].onmouseout = function(){
+                this.className = this.className.replace('hilite','');
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+
+<div id="header">
+		<div class="header_bg" >
+			<h1>Starship</h1>
+            <h2><strong>自动分析投资等级和回报等级，并生成综合报告，让您投资更准确。</strong></br></h2>
+            <p style="font-size:20px">本网站所用数据来自:
+            <br> <a href="https://www.qichacha.com/">企查查</a> </p>
+		</div>
+	</div>
+
+<div class="header_bg">
+<h3>请输入公司名称并上传<strong>现金流量表、利润表和资产负债表</strong></h3>
+            <p>在深圳证券交易所、上海证券交易所上市的公司的财务报表可从
+               <a href="http://quotes.money.163.com/stock">网易财经网</a>处下载</br>
+               （操作提示：进入<a href="http://quotes.money.163.com/stock">网易财经网</a> >>
+               在右上角搜索框输入公司名称 >> 点击“财务分析” >> 点击相应财务报表 >> 选择“按年度” >>
+               点击右上角“下载数据”）</p>
+</div>
+
+
+{% if submitted %}
+<div class="input_container">
+    <p> 成功提交文件</p>
+</div>
+{% else %}
+<div class="input_container">
+<form action="" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <table>
+            {{ form.as_table }}
+           <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Submit" class="submit_button"></td>
+            </tr>
+        </table>
+      {% csrf_token %}
+    </form>
+</div>
+{% endif %}
+
+
+<h2 class="hidden"> </h2>
+
+		<div class="wide_boxes6">
+				<p><b><a href="result/report" target="_self" style="color:black">点击获取报告</a></b></p>
+	    </div>
+
+<h2 class="hidden"> </h2>
+</body>
+
+</html>

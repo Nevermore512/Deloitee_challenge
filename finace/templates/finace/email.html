@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{{ obj.as_p }}
+{{ obj.email.label_tag }}
+{{ obj.email }}
+{% load myfun %}
+{{ obj.email|label_with_classes:'c1 c2' }}
+
+</body>
+</html>

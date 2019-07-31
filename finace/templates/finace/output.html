@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+<meta charset="utf-8">
+<title>Starship分析结果</title>
+<style>
+/* Hidden line for separating boxes */
+h2.hidden {visibility:hidden;font-size:50px}
+
+
+/* Links */
+a:link {color:#00FFFF;}      /* 未访问链接*/
+a:visited {color:#00FFFF;}  /* 已访问链接 */
+a:hover {color:#800000;}  /* 鼠标移动到链接上 */
+a:active {color:#800000;}  /* 鼠标点击时 */
+a{text-decoration:none}
+
+
+/* Three parts */
+#header{height:700px; display: block;  background:url(http://wx2.sinaimg.cn/large/0062QsxNgy1g5byigumgyj31hc0jgjtp.jpg)  no-repeat top center fixed; position: relative; text-align: center}
+.header_bg{display: block;width:1000px;margin:0px auto 0;padding-top:100px;padding-bottom:0px}
+.header_bg h1 {text-align: center;font-size:75px;line-height:50px;color: #FFFF99;}
+.header_bg h2 {text-align: center;font-size:30px;color: #FFFF99;}
+.header_bg h3 {text-align: center;font-size:25px;color: #fff;}
+.header_bg h3 strong {text-align: center;font-size:30px;color: #FFF;}
+.header_bg p{text-align: center;font-size:20px;color:#fff;}
+
+
+#footer {background-color: #f1f1f1;padding: 10px; text-align: center;
+}
+
+
+body{background:url(http://wx1.sinaimg.cn/large/0062QsxNgy1g5d70s39wij30s50gbae0.jpg)}
+
+/* Boxes and Button */
+.input_container:hover{margin: auto; background-color:#fffacd; opacity:1; width: 600px; height:100%; border: 0px; padding: 25px; font-size:25px; text-align:center; box-shadow: 10px 10px 5px #888888; border-radius:25px;}
+.input_container{margin: auto; background-color:#fffacd; opacity:0.8; width: 600px; height:100%; border: 0px; padding: 25px; font-size:25px; text-align:center; box-shadow: 10px 10px 5px #888888; border-radius:25px;}
+
+.wide_boxes1:hover {margin: auto; background-color:#FFCC99; width: 400px; border: 1px solid #FFCC99; padding: 15px; font-size:25px; text-align:center;color:black;border-radius:10px;}
+.wide_boxes1 {margin: auto; background-color:#fffacd; width: 400px; border: 1px solid #FFCC99; padding: 15px; font-size:25px; text-align:center;color:black;border-radius:10px;}
+
+.wide_boxes2:hover {margin: auto; background-color:#FFCC99; width: 400px; border: 1px solid #FFCC99; padding: 15px; font-size:25px; text-align:center;color:black;border-radius:10px;}
+.wide_boxes2 {margin: auto; background-color:#fffacd; width: 400px; border: 1px solid #FFCC99; padding: 15px; font-size:25px; text-align:center;color:black;border-radius:10px;}
+
+.wide_boxes3:hover {margin: auto; background-color:#FFCC99; width: 400px; border: 1px solid #FFCC99; padding: 15px; font-size:25px; text-align:center;color:black;border-radius:10px;}
+.wide_boxes3 {margin: auto; background-color:#fffacd; width: 400px; border: 1px solid #FFCC99; padding: 15px; font-size:25px; text-align:center;color:black;border-radius:10px;}
+
+.wide_boxes4:hover {margin: auto; background-color:#FFCC99; width: 400px; border: 1px solid #FFCC99; padding: 15px; font-size:25px; text-align:center;color:black;border-radius:10px;}
+.wide_boxes4 {margin: auto; background-color:#fffacd; width: 400px; border: 1px solid #FFCC99; padding: 15px; font-size:25px; text-align:center;color:black;border-radius:10px;}
+
+.wide_boxes5:hover {margin: auto; background-color:#FFCC99; width: 400px; border: 1px solid #FFCC99; padding: 15px; font-size:25px; text-align:center;color:black;border-radius:10px;}
+.wide_boxes5 {margin: auto; background-color:#fffacd; width: 400px; border: 1px solid #FFCC99; padding: 15px; font-size:25px; text-align:center;color:black;border-radius:10px;}
+
+.wide_boxes6:hover {margin: auto; background-color:#F0F0F0; border: 1px solid black; opacity:1; width: 600px; border: 0px; padding: 10px; font-size:30px; text-align:center; box-shadow: 10px 10px 5px #888888; border-radius:25px;}
+.wide_boxes6 {margin: auto; background-color:#F0F0F0; border: 1px solid black; opacity:0.7; width: 600px; border: 0px; padding: 10px; font-size:30px; text-align:center; box-shadow: 10px 10px 5px #888888; border-radius:25px;}
+
+.wide_boxes_output:hover {margin: auto; background-color:#fffacd; opacity:1; width: 600px; border: 0px; padding: 25px; font-size:25px; text-align:center; box-shadow: 10px 10px 5px #888888; border-radius:25px;}
+.wide_boxes_output {margin: auto; background-color:#fffacd; opacity:0.7; width: 600px; border: 0px; padding: 25px; font-size:25px; text-align:center; box-shadow: 10px 10px 5px #888888; border-radius:25px;}
+
+.select_button {background-color: #FFFFF0; border: none; color: black; padding: 5px 10px; text-align: center; text-decoration: none; display: inline-block; font-size: 10px; margin: 4px 2px; cursor: pointer;}
+.submit_button {background-color: #FFFFF0; border:1px solid black; color: black; padding: 10px 15px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px; margin: 4px 2px; cursor: pointer;}
+
+.output_container {margin: 0 auto; width: 1300px; height: 450px; border: 0px; text-align: center;}
+.output_container p{font-size:25px}
+.output_container h2 strong{color:#800000;font-size:30px;}
+.output_container p hidden{display:none;}
+
+.output_divbox1:hover {box-sizing: border-box; width: 30%; padding:0px; margin:10px; height: 400px; background:#fffacd; display: inline-block; font-size:30px; box-shadow: 10px 10px 5px #888888; border-radius:25px; opacity:1; color:black;float:left;position:absolute;left:0px;}
+.output_divbox1 {box-sizing: border-box; width: 30%; padding:0px; margin:10px; height: 400px; background:#fffacd; display: inline-block; font-size:30px; box-shadow: 10px 10px 5px #888888; border-radius:25px; opacity:0.9; color:black;float:left;position:absolute;left:0px;}
+
+.output_divbox2:hover {box-sizing: border-box; width: 30%; padding:0px; margin:10px; height: 400px; background:#fffacd; display: inline-block; font-size:30px; box-shadow: 10px 10px 5px #888888; border-radius:25px; opacity:1; color:black;float:left;position:absolute;left:500px;}
+.output_divbox2 {box-sizing: border-box; width: 30%; padding:0px; margin:10px; height: 400px; background:#fffacd; display: inline-block; font-size:30px; box-shadow: 10px 10px 5px #888888; border-radius:25px; opacity:0.9; color:black;float:left;position:absolute;left:500px;}
+
+.output_divbox3:hover {box-sizing: border-box; width: 30%; padding:0px; margin:10px; height: 400px; background:#fffacd; display: inline-block; font-size:30px; box-shadow: 10px 10px 5px #888888; border-radius:25px; opacity:1; color:black;float:left;position:absolute;left:1000px;}
+.output_divbox3 {box-sizing: border-box; width: 30%; padding:0px; margin:10px; height: 400px; background:#fffacd; display: inline-block; font-size:30px; box-shadow: 10px 10px 5px #888888; border-radius:25px; opacity:0.9; color:black;float:left;position:absolute;left:1000px;}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="header">
+		<div class="header_bg" >
+			<h1>Starship</h1>
+            <h2><strong>自动分析投资等级和回报等级，并生成综合报告，让您投资更准确。</strong></br></h2>
+            <p style="font-size:20px">本网站所用数据来自:
+            <br> <a href="https://www.qichacha.com/">企查查</a> </p>
+		</div>
+	</div>
+
+
+<h2 class="hidden"> </h2>
+
+<div class="output_container">
+		<div class="output_divbox1">
+		<h2><strong>企业基本信息</strong></h2>
+		<p>企业名称：{{ name }}</br></br>
+		总资产（万）：{{ asset }}</br></br>
+		总负债（万）：{{ debt }}</br></br>
+		所有者权益（万）：{{ equilt }}</br></br>
+		</P>
+		</div>
+
+		<div class="output_divbox2">
+		<h2><strong>企业风险等级</strong></h2>
+		<p></br>
+		<h2><strong style="color:black;font-size:40px">{{ risk }}</strong></h2></br></br>
+		<hidden></hidden></br></br>
+		<hidden></hidden></br></br>
+		</P>
+		</div>
+
+		<div class="output_divbox3">
+		<h2><strong>投资回报等级</strong></h2>
+		<p></br>
+		<h2><strong style="color:black;font-size:40px">{{ return }}</strong></h2></br></br>
+		<hidden></hidden></br></br>
+		<hidden></hidden></br></br>
+		</P>
+		</div>
+</div>
+
+<h2 class="hidden"> </h2>
+
+<div class="wide_boxes_output" style="font-size:35px;padding:15px;">
+		<p><b><a href="report" target="_blank" style="color:black">点击获取综合报告</a></b></p>
+</div>
+
+<h2 class="hidden"> </h2>
+
+</body>
+	
+</html>
